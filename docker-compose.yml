@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  netcore2shop.web:
+    image: netcore2shop.web
+    build:
+      context: ./NetCore2Shop.web
+      dockerfile: Dockerfile

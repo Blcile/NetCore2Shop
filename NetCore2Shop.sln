@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore2Shop.web", "NetCore2Shop.web\NetCore2Shop.web.csproj", "{D4E45FD9-DB43-4276-816C-39FFFFC6C13C}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A14C9E42-6DBF-4CD4-809A-C405244E9E5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4E45FD9-DB43-4276-816C-39FFFFC6C13C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E45FD9-DB43-4276-816C-39FFFFC6C13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E45FD9-DB43-4276-816C-39FFFFC6C13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E45FD9-DB43-4276-816C-39FFFFC6C13C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A14C9E42-6DBF-4CD4-809A-C405244E9E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14C9E42-6DBF-4CD4-809A-C405244E9E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14C9E42-6DBF-4CD4-809A-C405244E9E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14C9E42-6DBF-4CD4-809A-C405244E9E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4A1B7DE-EB79-45BA-8729-E304448026E8}
+	EndGlobalSection
+EndGlobal
