@@ -9,7 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NetCore2Shop.Data;
+using NetCore2Shop.Data.Interface;
 using NetCore2Shop.Models;
+using NetCore2Shop.Data.Repositories;
 
 namespace NetCore2Shop.web
 {
@@ -30,6 +32,7 @@ namespace NetCore2Shop.web
                     p => p.MigrationsAssembly("NetCore2Shop.web")));
             services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<ShopDbContext>()
                 .AddDefaultTokenProviders();
+            AddDependencies(services);
             services.AddMvc();
         }
 
@@ -54,6 +57,13 @@ namespace NetCore2Shop.web
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        public IServiceCollection AddDependencies(IServiceCollection service)
+        {
+            service.AddScoped<ShopDbContext>();
+            service.AddScoped<IProductRepo, ProductRepo>();
+            return service;
         }
     }
 }

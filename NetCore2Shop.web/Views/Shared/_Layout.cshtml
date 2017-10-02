@@ -8,6 +8,8 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/reset.css" />
+        <link rel="stylesheet" href="~/css/main.css" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -17,7 +19,7 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+@*<nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -36,10 +38,48 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>*@
+    <div class="headerBar">
+        <div class="topBar">
+            <div class="comWidth">
+                <div class="leftArea">
+                    <a href="#" class="collection">收藏慕课</a>
+                </div>
+                <div class="rightArea">
+                    欢迎来到慕课网!<a href="#">[登录]</a><a href="#">[免费注册]</a>
+                </div>
+            </div>
+        </div><!--topBar结束-->
+
+        <div class="logoBar">
+            <div class="comWidth">
+                <div class="logo fl">
+                    <a href="#"><img src="~/images/logo.jpg" alt="慕课网" /></a>
+                </div>
+                <div class="searchBox fl">
+                    <input type="text" class="search_text fl">
+                    <input type="button" value="搜索" class="search_btn fr" />
+                </div>
+                <div class="shopCar fr">
+                    <span class="shopText fl">购物车</span>
+                    <span class="shopNum fl">0</span>
+                </div>
+            </div>
+        </div><!--logoBar结束-->
+    </div><!--headerBar结束-->
     <div class="container body-content">
         @RenderBody()
         <hr />
+        <div class="footer">
+            <p><a href="#">慕课简介</a><i>|</i><a href="#">慕课公告</a><i>|</i> <a href="#">招纳贤士</a><i>|</i> <a href="#">联系我们</a><i>|</i>客服热线：400-675-1234</p>
+            <p>Copyright &copy; 2006 - 2014 慕课版权所有&nbsp;&nbsp;&nbsp;京ICP备09037834号&nbsp;&nbsp;&nbsp;京ICP证B1034-8373号&nbsp;&nbsp;&nbsp;某市公安局XX分局备案编号：123456789123</p>
+            <p class="web">
+                <a href="#"><img src="~/images/weblogo.png" alt="信用网站"></a>
+                <a href="#"><img src="~/images/weblogo.png" alt="信用网站"></a>
+                <a href="#"><img src="~/images/weblogo.png" alt="信用网站"></a>
+                <a href="#"><img src="~/images/weblogo.png" alt="信用网站"></a>
+            </p>
+        </div>
         <footer>
             <p>&copy; 2017 - NetCore2Shop.web</p>
         </footer>
