@@ -63,6 +63,15 @@ namespace NetCore2Shop.web
         {
             service.AddScoped<ShopDbContext>();
             service.AddScoped<IProductRepo, ProductRepo>();
+            service.AddScoped<IAddressRepo, AddressRepo>();
+            service.AddScoped<IBrandRepo, BrandRepo>();
+            service.AddScoped<ICatagoryRepo, CatagotyRepo>();
+            service.AddScoped<ICityRepo, CityRepo>();
+            service.AddScoped<ICommentRepo, CommentRepo>();
+            service.AddScoped<IImageRepo, ImageRepo>();
+            service.AddScoped<IOrderDetailRepo, OrderDetailRepo>();
+            service.AddScoped<IOrderRepo, OrderRepo>();
+            service.AddScoped<IProvinceRepo, ProvinceRepo>();
             return service;
         }
     }

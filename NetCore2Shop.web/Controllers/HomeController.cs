@@ -22,10 +22,6 @@ namespace NetCore2Shop.web.Controllers
             return View();
         }
 
-        public IActionResult Search()
-        {
-            return View();
-        }
 
         public IActionResult About()
         {
@@ -34,12 +30,7 @@ namespace NetCore2Shop.web.Controllers
             return View();
         }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
 
-            return View();
-        }
 
         public IActionResult Error()
         {

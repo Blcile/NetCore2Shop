@@ -1,305 +1,481 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="navBox">
-    <div class="comWidth">
-        <div class="shopClass fl">
-            <h3>全部商品分类<i></i></h3>
-            <div class="shopClass_show">
-                <dl class="shopClass_item">
-                    <dt><a href="#" class="b">手机</a> <a href="#" class="b">数码</a> <a href="#" class="aLink">合约机</a></dt>
-                    <dd><a href="#">荣耀</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
-                </dl>
-
-                <dl class="shopClass_item">
-                    <dt><a href="#" class="b">手机</a> <a href="#" class="b">数码</a> <a href="#" class="aLink">合约机</a></dt>
-                    <dd><a href="#">荣耀</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
-                </dl>
-
-                <dl class="shopClass_item">
-                    <dt><a href="#" class="b">手机</a> <a href="#" class="b">数码</a> <a href="#" class="aLink">合约机</a></dt>
-                    <dd><a href="#">荣耀</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
-                </dl>
-
-                <dl class="shopClass_item">
-                    <dt><a href="#" class="b">手机</a> <a href="#" class="b">数码</a> <a href="#" class="aLink">合约机</a></dt>
-                    <dd><a href="#">荣耀</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
-                </dl>
-
-                <dl class="shopClass_item">
-                    <dt><a href="#" class="b">手机</a> <a href="#" class="b">数码</a> <a href="#" class="aLink">合约机</a></dt>
-                    <dd><a href="#">荣耀</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
-                </dl>
+@section header{
+    <div class="middle">
+        <div class="wp">
+            <a href="#"><img class="fl" src="~/images/logo.jpg" /></a>
+            <div class="searchbox fr">
+                <div class="selectContainer fl">
+                    <span class="selectOption" id="jsSelectOption" data-value="course">
+                        公开课
+                    </span>
+                    <ul class="selectMenu" id="jsSelectMenu">
+                        <li data-value="course">公开课</li>
+                        <li data-value="org">课程机构</li>
+                        <li data-value="teacher">授课老师</li>
+                    </ul>
+                </div>
+                <input id="search_keywords" class="fl" type="text" value="" placeholder="请输入搜索内容" />
+                <img class="search_btn fr" id="jsSearchBtn" src="~/images/search_btn.png" />
             </div>
-            <div class="shopClass_list hide">
-                <div class="shopClass_cont">
-                    <dl class="shopList_item">
-                        <dt>电脑装机</dt>
-                        <dd>
-                            <a href="#">笔记本</a><a href="#">超极本</a><a href="#">上网本</a><a href="#">平板电脑</a><a href="#">台式机</a>
-                        </dd>
-                    </dl>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav">
+            <div class="wp">
+                <ul>
+                    <li><a href="#">分类</a></li>
+                    <li class="active"><a href="#">首页</a></li>
+                    <li>
+                        <a href="#">
+                            公开课<img class="hot" src="~/images/nav_hot.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">授课教师</a>
+                    </li>
+                    <li><a href="#">授课机构</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+}
+
+<div class="banner">
+    <div class="wp">
+        <div class="fl">
+            <div class="imgslide">
+                <ul class="imgs">
+                    <li>
+                        <a href="#">
+                            <img width="1200" height="478" src="~/media/banner/2016/11/1.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img width="1200" height="478" src="~/media/banner/2016/11/2.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img width="1200" height="478" src="~/media/banner/2016/11/1.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img width="1200" height="478" src="~/media/banner/2016/11/2.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img width="1200" height="478" src="~/media/banner/2016/11/1.jpg" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="unslider-arrow prev"></div>
+            <div class="unslider-arrow next"></div>
+        </div>
+
+    </div>
+
+
+</div>
+<!--banner end-->
+<!--feature start-->
+<section>
+    <div class="wp">
+        <ul class="feature">
+            <li class="feature1">
+                <img class="pic" src="~/images/feature1.png" />
+                <p class="center">专业权威</p>
+            </li>
+            <li class="feature2">
+                <img class="pic" src="~/images/feature2.png" />
+                <p class="center">课程最新</p>
+            </li>
+            <li class="feature3">
+                <img class="pic" src="~/images/feature3.png" />
+                <p class="center">名师授课</p>
+            </li>
+            <li class="feature4">
+                <img class="pic" src="~/images/feature4.png" />
+                <p class="center">数据真实</p>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--feature end-->
+<!--module1 start-->
+<section>
+    <div class="module">
+        <div class="wp">
+            <h1>公开课程</h1>
+            <div class="module1 eachmod">
+                <div class="module1_1 left">
+                    <img width="228" height="614" src="~/images/module1_1.jpg" />
+                    <p class="fisrt_word">名师授课<br />专业权威</p>
+                    <a class="more" href="#">查看更多课程 ></a>
                 </div>
-                <div class="shopClass_cont">
-                    <dl class="shopList_item">
-                        <dt>电脑配件</dt>
-                        <dd>
-                            <a href="#">CPU</a><a href="#">硬盘</a><a href="#">SSD固态硬盘</a><a href="#">内存</a><a href="#">显示器</a><a href="#">智能显示器</a><a href="#">主板</a><a href="#">显卡</a><a href="#">机箱</a><a href="#">电源</a><a href="#">散热器</a><a href="#">刻录机/光驱</a><a href="#">声卡</a><a href="#">拓展卡</a><a href="#">服务器配件</a><a href="#">DIY小附件</a><a href="#">装机/配件安装</a>
-                        </dd>
-                    </dl>
-                </div>
-                <div class="shopClass_cont">
-                    <dl class="shopList_item">
-                        <dt>整机附件</dt>
-                        <dd>
-                            <a href="#">电脑包</a><a href="#">电脑桌</a><a href="#">电池</a><a href="#">电源适配器</a><a href="#">贴膜</a><a href="#">清洁用品</a><a href="#">笔记本散热</a><a href="#">USB拓展</a><a href="#">平板配件</a><a href="#">特色配件</a><a href="#">插座网线/电话线</a><a href="#">影音线材</a><a href="#">电脑线材</a>
-                        </dd>
-                    </dl>
-                </div>
-                <div class="shopClass_cont">
-                    <dl class="shopList_item">
-                        <dt>电脑外设</dt>
-                        <dd>
-                            <a href="#">鼠标</a><a href="#">键盘</a><a href="#">游戏外设</a><a href="#">移动硬盘</a><a href="#">摄像头</a><a href="#">高清播放器</a><a href="#">外置盒</a><a href="#">移动硬盘包</a><a href="#">手写板/绘画板</a>
-                        </dd>
-                    </dl>
-                </div>
-                <div class="shopClass_cont">
-                    <dl class="shopList_item">
-                        <dt>音频设备</dt>
-                        <dd>
-                            <a href="#">音响</a><a href="#">耳机/耳麦</a><a href="#">麦克风</a><a href="#">声卡</a><a href="#">音频附件</a><a href="#">录音笔</a>
-                        </dd>
-                    </dl>
-                    <div class="shopList_links">
-                        <a href="#">电脑整机频道<span></span></a>
-                        <a href="#">硬件/外设频道<span></span></a>
+                <div class="right group_list">
+                    <div class="module1_2 box">
+                        <div class="imgslide2">
+                            <ul class="imgs">
+                                <li>
+                                    <a href="#">
+                                        <img width="470" height="300" src="~/media/courses/2016/12/python文件处理.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img width="470" height="300" src="~/media/courses/2016/12/python面向对象.jpg" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="unslider-arrow2 prev"></div>
+                        <div class="unslider-arrow2 next"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <ul class="nav fl">
-            <li><a href="#" class="active">数码城</a></li>
-            <li><a href="#">天黑黑</a></li>
-            <li><a href="#">团购</a></li>
-            <li><a href="#">发现</a></li>
-            <li><a href="#">二手特卖</a></li>
-            <li><a href="#">名品会</a></li>
-        </ul>
-    </div>
-</div><!--navBar结束-->
-<div class="banner comWidth clearfix">
-    <div class="banner_bar banner_big">
-        <ul class="imgBox">
-            <li><a href="#"><img src="banner/banner_01.gif"></a></li>
-            <li><a href="#"><img src="banner/banner_02.gif"></a></li>
-        </ul>
-        <div class="imgNum">
-            <a href="#" class="active"></a>
-            <a href="#"></a>
-        </div>
-    </div>
-</div>
-<div class="shopTit comWidth">
-    <span class="icon"></span>
-    <h3>家用电脑</h3>
-    <a href="#" class="more">更多>></a>
-</div>
-<div class="shopList comWidth clearfix">
-    <div class="leftArea">
-        <div class="banner_bar banner_sm">
-            <ul class="imgBox">
-                <li><a href="#"><img src="banner/banner_sm_01.png"></a></li>
-                <li><a href="#"><img src="banner/food_banner_sm_01.png"></a></li>
-            </ul>
-            <div class="imgNum">
-                <a href="#" class="active"></a>
-                <a href="#"></a>
-            </div>
-        </div>
-    </div>
-    <div class="rightArea">
-        <div class="shopList_top ">
-            <div class="shop_item">
-                <div class="shop_img">
-                    <a href="#"><img src="images/shopImg.png" alt="手机图片"></a>
-                </div>
-                <h3>HTC新渴望8系列</h3>
-                <p>1899元</p>
-            </div>
-            <div class="shop_item">
-                <div class="shop_img">
-                    <a href="#"><img src="images/shopImg.png" alt="手机图片"></a>
-                </div>
-                <h3>HTC新渴望8系列</h3>
-                <p>1899元</p>
-            </div>
-            <div class="shop_item">
-                <div class="shop_img">
-                    <a href="#"><img src="images/shopImg.png" alt="手机图片"></a>
-                </div>
-                <h3>HTC新渴望8系列</h3>
-                <p>1899元</p>
-            </div>
-            <div class="shop_item">
-                <div class="shop_img">
-                    <a href="#"><img src="images/shopImg.png" alt="手机图片"></a>
-                </div>
-                <h3>HTC新渴望8系列</h3>
-                <p>1899元</p>
-            </div>
-        </div>
-        <div class="shopList_sm clearfix">
-            <div class="shopItem_sm">
-                <div class="shopItem_smImg">
-                    <a href="#"><img src="images/shopImg.png"></a>
-                </div>
-                <div class="shopItem_text">
-                    <p>
-                        NFC技术一碰轻松
-                        配对！接触屏幕
-                    </p>
-                    <h3>￥194.00</h3>
-                </div>
-            </div>
-            <div class="shopItem_sm">
-                <div class="shopItem_smImg">
-                    <a href="#"><img src="images/shopImg.png"></a>
-                </div>
-                <div class="shopItem_text">
-                    <p>
-                        NFC技术一碰轻松
-                        配对！接触屏幕
-                    </p>
-                    <h3>￥194.00</h3>
-                </div>
-            </div>
-            <div class="shopItem_sm">
-                <div class="shopItem_smImg">
-                    <a href="#"><img src="images/shopImg.png"></a>
-                </div>
-                <div class="shopItem_text">
-                    <p>
-                        NFC技术一碰轻松
-                        配对！接触屏幕
-                    </p>
-                    <h3>￥194.00</h3>
-                </div>
-            </div>
-            <div class="shopItem_sm">
-                <div class="shopItem_smImg">
-                    <a href="#"><img src="images/shopImg.png"></a>
-                </div>
-                <div class="shopItem_text">
-                    <p>
-                        NFC技术一碰轻松
-                        配对！接触屏幕
-                    </p>
-                    <h3>￥194.00</h3>
+
+                    <div class="module1_3 box">
+                        <a href="#">
+                            <img width="233" height="190" src="~/media/courses/2016/11/mysql.jpg" />
+                        </a>
+                        <div class="des">
+                            <a href="#">
+                                <h2 title="django入门">django入门</h2>
+                            </a>
+                            <span class="fl">难度：<i class="key">初级</i></span>
+                            <span class="fr">学习人数：3</span>
+                        </div>
+                        <div class="bottom">
+                            <span class="fl" title="慕课网">慕课网</span>
+                            <span class="star fr">0</span>
+                        </div>
+                    </div>
+
+                    <div class="module1_4 box">
+                        <a href="#">
+                            <img width="233" height="190" src="~/media/courses/2016/11/mysql.jpg" />
+                        </a>
+                        <div class="des">
+                            <a href="#">
+                                <h2 title="java入门">java入门</h2>
+                            </a>
+                            <span class="fl">难度：<i class="key">中级</i></span>
+                            <span class="fr">学习人数：0</span>
+                        </div>
+                        <div class="bottom">
+                            <span class="fl" title="北京大学">北京大学</span>
+                            <span class="star fr">0</span>
+                        </div>
+                    </div>
+
+                    <div class="module1_5 box">
+                        <a href="#">
+                            <img width="233" height="190" src="~/media/courses/2016/11/mysql.jpg" />
+                        </a>
+                        <div class="des">
+                            <a href="#">
+                                <h2 title="python入门">python入门</h2>
+                            </a>
+                            <span class="fl">难度：<i class="key">中级</i></span>
+                            <span class="fr">学习人数：0</span>
+                        </div>
+                        <div class="bottom">
+                            <span class="fl" title="南京大学">南京大学</span>
+                            <span class="star fr">0</span>
+                        </div>
+                    </div>
+
+                    <div class="module1_6 box">
+                        <a href="#">
+                            <img width="233" height="190" src="~/media/courses/2016/11/mysql.jpg" />
+                        </a>
+                        <div class="des">
+                            <a href="#">
+                                <h2 title="java入门2">java入门2</h2>
+                            </a>
+                            <span class="fl">难度：<i class="key">高级</i></span>
+                            <span class="fr">学习人数：0</span>
+                        </div>
+                        <div class="bottom">
+                            <span class="fl" title="慕课网2">慕课网2</span>
+                            <span class="star fr">0</span>
+                        </div>
+                    </div>
+
+                    <div class="module1_7 box">
+                        <a href="#">
+                            <img width="233" height="190" src="~/media/courses/2016/11/mysql.jpg" />
+                        </a>
+                        <div class="des">
+                            <a href="#">
+                                <h2 title="java入门3">java入门3</h2>
+                            </a>
+                            <span class="fl">难度：<i class="key">初级</i></span>
+                            <span class="fr">学习人数：1</span>
+                        </div>
+                        <div class="bottom">
+                            <span class="fl" title="慕课网3">慕课网3</span>
+                            <span class="star fr">0</span>
+                        </div>
+                    </div>
+
+                    <div class="module1_8 box">
+                        <a href="#">
+                            <img width="233" height="190" src="~/media/courses/2016/11/mysql.jpg" />
+                        </a>
+                        <div class="des">
+                            <a href="#">
+                                <h2 title="python入门2">python入门2</h2>
+                            </a>
+                            <span class="fl">难度：<i class="key">中级</i></span>
+                            <span class="fr">学习人数：0</span>
+                        </div>
+                        <div class="bottom">
+                            <span class="fl" title="慕课网666">慕课网666</span>
+                            <span class="star fr">0</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="shopTit comWidth">
-    <span class="icon"></span>
-    <h3>家用电脑</h3>
-    <a href="#" class="more">更多>></a>
-</div>
-<div class="shopList comWidth clearfix">
-    <div class="leftArea">
-        <div class="banner_bar banner_sm">
-            <ul class="imgBox">
-                <li><a href="#"><img src="banner/banner_sm_01.png"></a></li>
-                <li><a href="#"><img src="banner/food_banner_sm_01.png"></a></li>
-            </ul>
-            <div class="imgNum">
-                <a href="#" class="active"></a>
-                <a href="#"></a>
+</section>
+<section>
+    <div class="module greybg">
+        <div class="wp">
+            <h1>课程机构</h1>
+            <div class="module3 eachmod">
+                <div class="module3_1 left">
+                    <img width="228" height="463" src="~/images/module3_1.jpg" />
+                    <p class="fisrt_word">名校来袭<br />权威认证</p>
+                    <a class="more" href="#">查看更多机构 ></a>
+                </div>
+                <div class="right">
+                    <ul>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="慕课网">慕课网</span></p>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="北京大学">北京大学</span></p>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="清华大学">清华大学</span></p>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="南京大学">南京大学</span></p>
+                            </a>
+                        </li>
+
+                        <li class="five">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="慕课网2">慕课网2</span></p>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="慕课网3">慕课网3</span></p>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="慕课网3">慕课网3</span></p>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="慕课网4">慕课网4</span></p>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="慕课网5">慕课网5</span></p>
+                            </a>
+                        </li>
+
+                        <li class="five">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="慕课网666">慕课网666</span></p>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="慕学网">慕学网</span></p>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="python培训机构">python培训机构</span></p>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="vuejs培训">vuejs培训</span></p>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="nodejs培训">nodejs培训</span></p>
+                            </a>
+                        </li>
+
+                        <li class="five">
+                            <a href="#">
+                                <div class="company">
+                                    <img width="184" height="100" src="~/media/org/2016/11/imooc.png" />
+                                    <div class="score">
+                                        <div class="circle">
+                                            <h2>全国知名</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="key" title="慕学在线">慕学在线</span></p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <div class="rightArea">
-        <div class="shopList_top ">
-            <div class="shop_item">
-                <div class="shop_img">
-                    <a href="#"><img src="images/shopImg.png" alt="手机图片"></a>
-                </div>
-                <h3>HTC新渴望8系列</h3>
-                <p>1899元</p>
-            </div>
-            <div class="shop_item">
-                <div class="shop_img">
-                    <a href="#"><img src="images/shopImg.png" alt="手机图片"></a>
-                </div>
-                <h3>HTC新渴望8系列</h3>
-                <p>1899元</p>
-            </div>
-            <div class="shop_item">
-                <div class="shop_img">
-                    <a href="#"><img src="images/shopImg.png" alt="手机图片"></a>
-                </div>
-                <h3>HTC新渴望8系列</h3>
-                <p>1899元</p>
-            </div>
-            <div class="shop_item">
-                <div class="shop_img">
-                    <a href="#"><img src="images/shopImg.png" alt="手机图片"></a>
-                </div>
-                <h3>HTC新渴望8系列</h3>
-                <p>1899元</p>
-            </div>
-        </div>
-        <div class="shopList_sm clearfix">
-            <div class="shopItem_sm">
-                <div class="shopItem_smImg">
-                    <a href="#"><img src="images/shopImg.png"></a>
-                </div>
-                <div class="shopItem_text">
-                    <p>
-                        NFC技术一碰轻松
-                        配对！接触屏幕
-                    </p>
-                    <h3>￥194.00</h3>
-                </div>
-            </div>
-            <div class="shopItem_sm">
-                <div class="shopItem_smImg">
-                    <a href="#"><img src="images/shopImg.png"></a>
-                </div>
-                <div class="shopItem_text">
-                    <p>
-                        NFC技术一碰轻松
-                        配对！接触屏幕
-                    </p>
-                    <h3>￥194.00</h3>
-                </div>
-            </div>
-            <div class="shopItem_sm">
-                <div class="shopItem_smImg">
-                    <a href="#"><img src="images/shopImg.png"></a>
-                </div>
-                <div class="shopItem_text">
-                    <p>
-                        NFC技术一碰轻松
-                        配对！接触屏幕
-                    </p>
-                    <h3>￥194.00</h3>
-                </div>
-            </div>
-            <div class="shopItem_sm">
-                <div class="shopItem_smImg">
-                    <a href="#"><img src="images/shopImg.png"></a>
-                </div>
-                <div class="shopItem_text">
-                    <p>
-                        NFC技术一碰轻松
-                        配对！接触屏幕
-                    </p>
-                    <h3>￥194.00</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+</section>
+
+@section Scripts{
+    <script src="~/js/index.js" type="text/javascript"></script>
+}

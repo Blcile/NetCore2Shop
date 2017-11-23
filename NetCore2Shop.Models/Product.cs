@@ -5,6 +5,7 @@ namespace NetCore2Shop.Models
     public class Product : BaseModel
     {
         public string name { get; set; }
+        public Category Category { get; set; }
         public IEnumerable<Image> Images { get; set; }
         public Address ProdutAddress { get; set; }
         public IEnumerable<Comment> Comments { get; set; }
