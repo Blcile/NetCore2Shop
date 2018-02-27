@@ -4,7 +4,7 @@
     <ProjectVersion>2.0</ProjectVersion>
     <DockerTargetOS>Windows</DockerTargetOS>
     <ProjectGuid>a14c9e42-6dbf-4cd4-809a-c405244e9e5d</ProjectGuid>
-    <DockerLaunchBrowser>false</DockerLaunchBrowser>
+    <DockerLaunchBrowser>true</DockerLaunchBrowser>
     <DockerServiceUrl>http://{ServiceIPAddress}</DockerServiceUrl>
     <DockerServiceName>netcore2shop.web</DockerServiceName>
   </PropertyGroup>
