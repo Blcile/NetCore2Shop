@@ -57,6 +57,12 @@ namespace NetCore2Shop.web
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "admin",
+                    template: "{admin:exists}/{controller=Home}/{action=Index}/{id?}");
+            });
         }
 
         public IServiceCollection AddDependencies(IServiceCollection service)
