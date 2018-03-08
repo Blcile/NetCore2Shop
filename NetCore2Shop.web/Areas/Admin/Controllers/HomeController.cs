@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace NetCore2Shop.web.Controllers
+namespace NetCore2Shop.web.Areas.Admin.Controllers
 {
-    public class UserController : Controller
+    [Area("Admin")]
+    public class HomeController : Controller
     {
-        // GET: User
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
-
     }
 }

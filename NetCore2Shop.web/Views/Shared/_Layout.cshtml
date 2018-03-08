@@ -1,133 +1,108 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - NetCore2Shop.web</title>
-    <link rel="stylesheet" type="text/css" href="~/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="~/css/animate.css">
-    <link rel="stylesheet" type="text/css" href="~/css/style.css">
-    <script src="~/js/jquery.min.js" type="text/javascript"></script>
-    <script src="~/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
-    <script src="~/js/selectUi.js" type='text/javascript'></script>
-    <script src="~/js/deco-common.js" type='text/javascript'></script>
-    <script src="~/js/plugins/laydate/laydate.js" type="text/javascript"></script>
-    <script src="~/js/plugins/layer/layer.js" type="text/javascript"></script>
-    <script src="~/js/plugins/queryCity/js/public.js" type="text/javascript"></script>
-    <script src="~/js/unslider.js" type="text/javascript"></script>
-    <script src="~/js/plugins/jquery.scrollLoading.js" type="text/javascript"></script>
-    @RenderSection("Css",required:false)
-    @*<environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="stylesheet" href="~/css/reset.css" />
-        <link rel="stylesheet" href="~/css/main.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>*@
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - NetCore2Shop.web</title>
+	<script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+	<script type="text/javascript" src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	@RenderSection("Css", required: false)
 </head>
 <body>
-    <section class="headerwrap ">
-        <header>
-            <div class=" header">
-                <div class="top">
-                    <div class="wp">
-                        <div class="fl">
-                            <p>
-                                服务电话：<b>33333333</b>
-                            </p>
-                        </div>
-                        <!--登录后跳转-->
-                        <a style="color:white" class="fr registerbtn" href="/user/Register">注册</a> 
-                        <a style="color:white" class="fr loginbtn" href="/user/Login">登录</a> 
-
-                        @*<div class="personal">
-                            <dl class="user fr">
-                                <dd>bobby<img class="down fr" src="~/images/top_down.png" /></dd>
-                                <dt><img width="20" height="20" src="~/media/image/2016/12/default_big_14.png" /></dt>
-                            </dl>
-                            <div class="userdetail">
-                                <dl>
-                                    <dt><img width="80" height="80" src="~/media/image/2016/12/default_big_14.png" /></dt>
-                                    <dd>
-                                        <h2>django</h2>
-                                        <p>bobby</p>
-                                    </dd>
-                                </dl>
-                                <div class="btn">
-                                    <a class="personcenter fl" href="usercenter-info.html">进入个人中心</a>
-                                    <a class="fr" href="/logout/">退出</a>
-                                </div>
-                            </div>
-                        </div>*@
-                    </div>
-                </div>
-                @RenderSection("header",required:false)
-            </div>
-        </header>
-    </section>
-    @RenderBody()
-    <footer>
-        <div class="footer">
-            <div class="wp">
-                <ul class="cont">
-                    <li class="logo"><a href=""><img src="~/images/footlogo.png" /></a></li>
-                    <li class="code">
-                        <img src="~/images/code.jpg" />
-                        <p class="center">扫描关注微信</p>
-                    </li>
-                    <li class="third">
-                        <img class="fl" src="~/images/tell.png" />
-                        <p class="tell">33333333</p>
-                        <p class="time">周一至周日 9:00-18:00</p>
-                    </li>
-                </ul>
-
-            </div>
-            <p class="line"></p>
-            <div class="wp clear">
-                <span class="fl">@@ 2016 www.projectsedu.com 慕学在线-在线学习交流平台 保留所有权利</span>
-                <span class="fr">copyright @@ 2016 ICP备案证书号：蜀ICP备xxxxx号-1</span>
-            </div>
-        </div>
-    </footer>
-
-    <section>
-        <ul class="sidebar">
-            <li class="qq">
-                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2023525077&site=qq&menu=yes"></a>
-            </li>
-            <li class="totop"></li>
-        </ul>
-    </section>
-    @*<environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>*@
-
-    @RenderSection("Scripts", required: false)
+	<div class="container">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<header>
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Brand</a>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li class="active">
+									<a href="#">Link</a>
+								</li>
+								<li>
+									<a href="#">Link</a>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" href="#" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Action</a>
+										</li>
+										<li>
+											<a href="#">Another action</a>
+										</li>
+										<li>
+											<a href="#">Something else here</a>
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											<a href="#">Separated link</a>
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											<a href="#">One more separated link</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<form class="navbar-form navbar-left" role="search">
+								<div class="form-group">
+									<input class="form-control" type="text" />
+								</div> <button class="btn btn-default" type="submit">Submit</button>
+							</form>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a class="fr" href="/login/regist">注册</a>
+								</li>
+								<li>
+									<a class="fr" href="/login">登录</a>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" href="#" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Action</a>
+										</li>
+										<li>
+											<a href="#">Another action</a>
+										</li>
+										<li>
+											<a href="#">Something else here</a>
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											<a href="#">Separated link</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					@RenderSection("header", required: false)
+				</header>
+				@RenderBody()
+			</div>
+			<footer>
+				<div class="footer">
+					<span>@@ 2017 dotnet Core Shop 保留所有权利</span>
+					<span>copyright @@ 2017 ICP备案证书号：无</span>
+				</div>
+			</footer>
+		</div>
+	</div>
+	@RenderSection("Scripts", required: false)
 </body>
 </html>
 

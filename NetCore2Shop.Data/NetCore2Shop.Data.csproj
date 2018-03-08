@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NetCore2Shop.Ioc\NetCore2Shop.Ioc.csproj" />
     <ProjectReference Include="..\NetCore2Shop.Models\NetCore2Shop.Models.csproj" />
   </ItemGroup>
 

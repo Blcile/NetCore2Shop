@@ -18,7 +18,7 @@ namespace NetCore2Shop.Test
         [TestMethod]
         public void TextDencrypt()
         {
-            Console.WriteLine(Encryption.DecrpytText("Iuj+JqdD7il2B2eA+yOsRg=="));
+            Console.WriteLine(Encryption.DecrpytText("h+iGBH1sz2U="));
         }
 
         [TestMethod]
@@ -26,17 +26,17 @@ namespace NetCore2Shop.Test
         {
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(new ValidateCode().CreateValidateCode(9));
+                Console.WriteLine(Common.ValidateCode.CreateValidateCode(4));
             }
         }
-
+        
         [TestMethod]
         public void ValidateCodeImg()
         {
             var code = new ValidateCode();
-            var c = code.CreateValidateCode(4);
+            var c = Common.ValidateCode.CreateValidateCode(4);
             Console.WriteLine(c);
-            Console.WriteLine(Convert.ToBase64String(code.CreateValidateGraphic(c)));
+            Console.WriteLine(Convert.ToBase64String(Common.ValidateCode.CreateValidateGraphic(c)));
         }
     }
 }

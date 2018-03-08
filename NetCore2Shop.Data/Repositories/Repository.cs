@@ -38,6 +38,11 @@ namespace NetCore2Shop.Data.Repositories
             }
         }
 
+        public async Task<T> GetAsync(Expression<Func<T, bool>> expression)
+        {
+            return await _dbContext.Set<T>().Where(expression).SingleOrDefaultAsync();
+        }
+
         public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _dbContext.Set<T>().ToListAsync();

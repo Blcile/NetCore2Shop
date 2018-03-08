@@ -7,7 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\js\**" />
+    <Content Remove="wwwroot\js\**" />
+    <EmbeddedResource Remove="wwwroot\js\**" />
+    <None Remove="wwwroot\js\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20170929075535_init0001.cs" />
+    <Compile Remove="Migrations\20170929075535_init0001.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.1.1" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
   </ItemGroup>
 
@@ -16,22 +31,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NetCore2Shop.Common\NetCore2Shop.Common.csproj" />
     <ProjectReference Include="..\NetCore2Shop.Data\NetCore2Shop.Data.csproj" />
+    <ProjectReference Include="..\NetCore2Shop.Ioc\NetCore2Shop.Ioc.csproj" />
     <ProjectReference Include="..\NetCore2Shop.Models\NetCore2Shop.Models.csproj" />
+    <ProjectReference Include="..\NetCore2Shop.Service\NetCore2Shop.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\admin\Controllers\" />
-    <Folder Include="Areas\admin\Data\" />
-    <Folder Include="Areas\admin\Models\" />
-    <Folder Include="Areas\admin\Views\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Data\" />
     <Folder Include="Views\Shared\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\js\site.js" />
-    <None Include="wwwroot\js\site.min.js" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
 
 </Project>

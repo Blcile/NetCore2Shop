@@ -11,15 +11,15 @@ namespace NetCore2Shop.Common
 {
     public class ValidateCode
     {
-        public int MaxLength => 10;
-        public int MinLength => 2;
+        public static int MaxLength => 10;
+        public static int MinLength => 2;
 
         /// <summary>
         /// 生成验证码
         /// </summary>
         /// <param name="length"></param>
         /// <returns></returns>
-        public string CreateValidateCode(int length)
+        public static string CreateValidateCode(int length)
         {
             int[] randMember = new int[length];
             int[] validateNums = new int[length];
@@ -61,7 +61,7 @@ namespace NetCore2Shop.Common
         /// </summary>
         /// <param name="context"></param>
         /// <param name="validateCode"></param>
-        public void CreateValidateGraphic(string validateCode, HttpContext context)
+        public static void CreateValidateGraphic(string validateCode, HttpContext context)
         {
             Bitmap image = new Bitmap((int)Math.Ceiling(validateCode.Length * 12.0), 22);
             Graphics g = Graphics.FromImage(image);
@@ -121,7 +121,7 @@ namespace NetCore2Shop.Common
         /// 创建验证码的图片
         /// </summary>
         /// <param name="validateCode">验证码</param>
-        public byte[] CreateValidateGraphic(string validateCode)
+        public static byte[] CreateValidateGraphic(string validateCode)
         {
             Bitmap image = new Bitmap((int) Math.Ceiling(validateCode.Length * 12.0), 22);
             Graphics g = Graphics.FromImage(image);
@@ -164,6 +164,11 @@ namespace NetCore2Shop.Common
                 g.Dispose();
                 image.Dispose();
             }
+        }
+
+        public static string GetImgBase64(string code)
+        {
+            return "data:image/jpeg;base64," + Convert.ToBase64String(CreateValidateGraphic(code));
         }
     }
 }
