@@ -28,17 +28,11 @@
 								<li class="active">
 									<a href="#">Link</a>
 								</li>
-								<li>
-									<a href="#">Link</a>
-								</li>
 								<li class="dropdown">
 									<a class="dropdown-toggle" href="#" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
 										<li>
 											<a href="#">Action</a>
-										</li>
-										<li>
-											<a href="#">Another action</a>
 										</li>
 										<li>
 											<a href="#">Something else here</a>
@@ -56,37 +50,8 @@
 									</ul>
 								</li>
 							</ul>
-							<form class="navbar-form navbar-left" role="search">
-								<div class="form-group">
-									<input class="form-control" type="text" />
-								</div> <button class="btn btn-default" type="submit">Submit</button>
-							</form>
 							<ul class="nav navbar-nav navbar-right">
-								<li>
-									<a class="fr" href="/login/regist">注册</a>
-								</li>
-								<li>
-									<a class="fr" href="/login">登录</a>
-								</li>
-								<li class="dropdown">
-									<a class="dropdown-toggle" href="#" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-									<ul class="dropdown-menu">
-										<li>
-											<a href="#">Action</a>
-										</li>
-										<li>
-											<a href="#">Another action</a>
-										</li>
-										<li>
-											<a href="#">Something else here</a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="#">Separated link</a>
-										</li>
-									</ul>
-								</li>
+								@await Html.PartialAsync("_LoginInfo")
 							</ul>
 						</div>
 					</nav>

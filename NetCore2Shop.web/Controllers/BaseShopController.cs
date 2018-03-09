@@ -9,6 +9,5 @@ namespace NetCore2Shop.web.Controllers
 {
     public class BaseShopController : Controller
     {
-        protected IAppUserRepo AppUserRepo;
     }
 }

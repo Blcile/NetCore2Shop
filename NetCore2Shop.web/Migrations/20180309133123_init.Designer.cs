@@ -11,9 +11,10 @@ using System;
 namespace NetCore2Shop.web.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
-    partial class ShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180309133123_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -172,10 +173,6 @@ namespace NetCore2Shop.web.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
-                    b.Property<DateTime>("CreateTime");
-
-                    b.Property<string>("CreateUser");
-
                     b.Property<string>("DisplayName");
 
                     b.Property<string>("Email")
@@ -184,8 +181,6 @@ namespace NetCore2Shop.web.Migrations
                     b.Property<bool>("EmailConfirmed");
 
                     b.Property<string>("Gender");
-
-                    b.Property<bool>("IsDelete");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -208,10 +203,6 @@ namespace NetCore2Shop.web.Migrations
                     b.Property<string>("SecurityStamp");
 
                     b.Property<bool>("TwoFactorEnabled");
-
-                    b.Property<DateTime>("UpdateTime");
-
-                    b.Property<string>("UpdateUser");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256);

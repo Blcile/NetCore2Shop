@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore2Shop.Common", "NetC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore2Shop.Test", "NetCore2Shop.Test\NetCore2Shop.Test.csproj", "{C0854F23-6027-4007-A278-11FCC70221AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore2Shop.Ioc", "NetCore2Shop.Ioc\NetCore2Shop.Ioc.csproj", "{80C536C3-B896-4766-B567-DB968C563E33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore2Shop.Ioc", "NetCore2Shop.Ioc\NetCore2Shop.Ioc.csproj", "{80C536C3-B896-4766-B567-DB968C563E33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore2Shop.Service", "NetCore2Shop.Service\NetCore2Shop.Service.csproj", "{3FF6DE1A-6B16-422D-8B49-89B70A0878AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore2Shop.Service", "NetCore2Shop.Service\NetCore2Shop.Service.csproj", "{3FF6DE1A-6B16-422D-8B49-89B70A0878AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

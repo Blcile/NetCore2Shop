@@ -5,7 +5,7 @@ using NetCore2Shop.Models;
 
 namespace NetCore2Shop.Data
 {
-    public class ShopDbContext:DbContext
+    public class ShopDbContext:IdentityDbContext<AppUser>
     {
         public ShopDbContext(DbContextOptions options)
             : base(options)
@@ -22,12 +22,11 @@ namespace NetCore2Shop.Data
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Province> Provinces { get; set; }
-        public DbSet<AppUser> AppUsers { get; set; }
-        public DbSet<Menu> Menus { get; set; }
-        public DbSet<Role> Role { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
+            builder.Entity<AppUser>().ToTable("AppUser");
             builder.Entity<Address>().ToTable("Address").HasKey(c => c.Id);
             builder.Entity<Brand>().ToTable("Brand").HasKey(c => c.Id);
             builder.Entity<Category>().ToTable("Category").HasKey(c => c.Id);
@@ -38,11 +37,6 @@ namespace NetCore2Shop.Data
             builder.Entity<OrderDetail>().ToTable("OrderDetail").HasKey(c => c.Id);
             builder.Entity<Product>().ToTable("Product").HasKey(c => c.Id);
             builder.Entity<Province>().ToTable("Province").HasKey(c => c.Id);
-            builder.Entity<AppUser>().ToTable("AppUser").HasKey(c => c.Id);
-            builder.Entity<Menu>().ToTable("Menu").HasKey(c => c.Id);
-            builder.Entity<Role>().ToTable("Role").HasKey(c => c.Id);
-
-            base.OnModelCreating(builder);
         }
     }
 }
